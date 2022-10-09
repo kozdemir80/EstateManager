@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="activity_main_activity_text_view_main" type="id" />
+    <item name="activity_main_activity_text_view_quantity" type="id" />
+    <item name="title" type="id" />
+    <item name="snippet" type="id" />
+
+</resources>

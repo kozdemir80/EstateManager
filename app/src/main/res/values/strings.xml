@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">RealEstateManager</string>
+    <string name="text_label_1" />
+    <string name="text_label_2" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open" />
+    <string name="close" />
+    <string name="prefix" />
+    <string name="suffix" />
+    <string name="Type" />
+    <string name="Vacancy" />
+    <string name="add_surface" />
+    <string name="enter_your_criteria">Enter Your Criteria</string>
+
+
+    <string name="no_of_rooms">No. of Rooms</string>
+    <string name="price">Price ($)</string>
+    <string name="type">Type</string>
+    <string name="status">Status</string>
+    <string name="prices">Prices($)</string>
+    <string name="number_of_rooms">Number of Rooms</string>
+    <string name="minimum">Minimum</string>
+    <string name="maximum">Maximum</string>
+    <string name="surface_m">Surface (m²)</string>
+    <string name="search_title">Search Title</string>
+    <string name="add_type" />
+    <string name="startdate">startdate</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="estate_headLine">Estate</string>
+    <string name="add_rooms">add rooms</string>
+    <string name="add_bedrooms">add bedrooms</string>
+    <string name="add_bathroom">add bathroom</string>
+    <string name="description">description</string>
+    <string name="add_location_headline">add location headline</string>
+    <string name="add_address">add address</string>
+    <string name="add_district">add district</string>
+    <string name="add_vicinity_headline">add vicinity headline</string>
+    <string name="add_vicinity">add vicinity</string>
+    <string name="add_toolbar">add</string>
+    <string name="information">Information</string>
+    <string name="realtor">realtor</string>
+    <string name="market_entry">market entry</string>
+    <string name="date_of_sale">date of sale</string>
+    <string name="no_date_selected">No Date Selected</string>
+    <string name="not_sold">Not Sold</string>
+    <string name="media">Media</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="description_headline">Description</string>
+    <string name="about">About</string>
+    <string name="vicinity">Vicinity</string>
+    <string name="update_estate_s_detail_info">Update estate\'s detail info</string>
+    <string name="notification_channel_title" />
+    <string name="notification_channel_description" />
+    <string name="date_picker_entry">Select estate\'s date of market entry</string>
+    <string name="error_type">Estate\'s type required</string>
+    <string name="error_price">Estate\'s price required</string>
+    <string name="error_address">Estate\'s address required</string>
+    <string name="error_district">Estate\'s district required</string>
+    <string name="error_photo">Please upload at least one photo</string>
+    <string name="error_status">Please select a date of sale</string>
+    <string name="error_entry_date">Please select a date of market entry</string>
+    <string name="error_sale_date">Please update estate\'s status</string>
+    <string name="error_status_search">Estate\'s status required</string>
+    <string name="error_surface_min">Minimum surface required</string>
+    <string name="error_surface_max">Maximum surface required</string>
+    <string name="error_rooms_min">Minimum no. of rooms required</string>
+    <string name="error_rooms_max">Maximum no. of rooms required</string>
+    <string name="error_price_min">Minimum price required</string>
+    <string name="error_price_max">Maximum price required</string>
+    <string name="error_availability_date">Please select a date of availability</string>
+    <string name="date_sale">Select estate\'s date of sale</string>
+
+</resources>
