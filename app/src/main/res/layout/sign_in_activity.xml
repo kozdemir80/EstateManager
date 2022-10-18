@@ -7,18 +7,75 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="324dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="354dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="84dp"
+        android:hint="@string/name"
+        app:boxBackgroundColor="@color/white"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/quantum_googred"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="347dp" />
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="77dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="603dp"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/quantum_googred"
+        android:hint="@string/lastname"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="361dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="505dp"
+        app:endIconMode="password_toggle"
+        android:hint="@string/password"
+        app:helperText="required*"
+        app:helperTextTextColor="@color/quantum_googred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="257dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

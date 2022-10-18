@@ -24,6 +24,9 @@
     <string name="maximum">Maximum</string>
     <string name="surface_m">Surface (m²)</string>
     <string name="search_title">Search Title</string>
+    <string name="name">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="password">Password</string>
     <string name="add_type" />
     <string name="startdate">startdate</string>
     <string name="selected_date">Selected Date</string>

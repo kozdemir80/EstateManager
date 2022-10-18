@@ -91,7 +91,7 @@
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="@string/add_surface"
+                android:text="@string/surface_m"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/search_type_and_status" />
