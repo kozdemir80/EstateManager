@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -53,6 +54,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -60,8 +62,8 @@
         android:layout_marginTop="33dp"
         android:layout_marginEnd="126dp"
         android:layout_marginBottom="505dp"
-        app:endIconMode="password_toggle"
         android:hint="@string/password"
+        app:endIconMode="password_toggle"
         app:helperText="required*"
         app:helperTextTextColor="@color/quantum_googred"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,6 +79,22 @@
             tools:layout_editor_absoluteX="76dp"
             tools:layout_editor_absoluteY="257dp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="403dp"
+        android:text="Sing In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        tools:ignore="HardcodedText">
+
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

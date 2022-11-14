@@ -36,7 +36,6 @@ class MapViewFragment:Fragment(R.layout.fragment_map_view),OnMapReadyCallback{
         private lateinit var placesClient: PlacesClient
         private var cameraPosition: CameraPosition? = null
         private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
-
         companion object {
         private const val KEY_CAMERA_POSITION = "camera_position"
         private const val KEY_LOCATION = "location"
