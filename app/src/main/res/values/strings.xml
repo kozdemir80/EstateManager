@@ -4,16 +4,13 @@
     <string name="text_label_2" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="open" />
-    <string name="close" />
+    <string name="open">Open </string>
+    <string name="close">Close </string>
     <string name="prefix" />
     <string name="suffix" />
-    <string name="Type" />
-    <string name="Vacancy" />
-    <string name="add_surface" />
+    <string name="Vacancy">Vacancy </string>
+    <string name="add_surface">Surface</string>
     <string name="enter_your_criteria">Enter Your Criteria</string>
-
-
     <string name="no_of_rooms">No. of Rooms</string>
     <string name="price">Price ($)</string>
     <string name="type">Type</string>
@@ -24,11 +21,10 @@
     <string name="maximum">Maximum</string>
     <string name="surface_m">Surface (m²)</string>
     <string name="search_title">Search Title</string>
-    <string name="name">First Name</string>
+    <string name="name">User Name</string>
     <string name="lastname">Last Name</string>
     <string name="password">Password</string>
-    <string name="add_type" />
-    <string name="startdate">startdate</string>
+    <string name="startDate">Start Date</string>
     <string name="selected_date">Selected Date</string>
     <string name="estate_headLine">Estate</string>
     <string name="add_rooms">add rooms</string>
@@ -41,7 +37,7 @@
     <string name="add_vicinity_headline">add vicinity headline</string>
     <string name="add_vicinity">add vicinity</string>
     <string name="add_toolbar">add</string>
-    <string name="information">Information</string>
+    <string name="Information">Information</string>
     <string name="realtor">realtor</string>
     <string name="market_entry">market entry</string>
     <string name="date_of_sale">date of sale</string>
@@ -74,5 +70,26 @@
     <string name="error_price_max">Maximum price required</string>
     <string name="error_availability_date">Please select a date of availability</string>
     <string name="date_sale">Select estate\'s date of sale</string>
+    <string name="alert_dialog_title" />
+    <string name="toolbar_add"> Add </string>
+    <string name="date_picker_sale" />
+    <string name="notification_title">New estate added</string>
+    <string name="notification_description">Estate creation successful</string>
+    <string name="notification_description_long">The estate you have just created has been successfully added to the database</string>
+    <string name="add_fab">Media</string>
+    <string name="add_type">Type</string>
+    <string name="SingUp">Already an user? Login</string>
+    <string name="User">Already an user?</string>
+    <string name="signUp">Not yet Registered? Sign Up</string>
+    <string name="sing_up">Sing Up</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="loan">Loan</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="interest_rate">Interest Rate</string>
+    <string name="loan_term_years">Loan Term (years)</string>
+    <string name="calculate">Calculate</string>
+    <string name="remember_me">Remember me</string>
+    <string name="no_match_found">No Match Found</string>
+    <string name="map">Map</string>
 
 </resources>

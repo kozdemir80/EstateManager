@@ -1,7 +1,5 @@
 package com.example.realestatemanager
-
 import org.junit.Test
-
 import org.junit.Assert.*
 
 /**

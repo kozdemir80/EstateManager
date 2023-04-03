@@ -4,9 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout-xxxhdpi/activity_main.xml" value="0.19829059829059828" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.75" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/add_item_layout.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/add_item_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/add_real_estate_activity.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/custom_info_contents.xml" value="0.12083333333333333" />
         <entry key="app/src/main/res/layout/description_activity.xml" value="0.12083333333333333" />
@@ -27,6 +27,7 @@
         <entry key="app/src/main/res/layout/real_estate_details.xml" value="0.11208333333333333" />
         <entry key="app/src/main/res/layout/real_estate_listing.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/sign_in_activity.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/menu/add_user.xml" value="0.12083333333333333" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.178" />
       </map>

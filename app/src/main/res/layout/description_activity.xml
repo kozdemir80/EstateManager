@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_description_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -23,9 +22,13 @@
                 android:id="@+id/detail_pager"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/detail_description_headline"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
                 android:id="@+id/detail_page_counter"
@@ -252,7 +255,6 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detail_vicinity_cv" />
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/detail_location_cv"
                 android:layout_width="match_parent"
@@ -264,23 +266,9 @@
                 app:cardElevation="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/detail_location_headline">
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <androidx.fragment.app.FragmentContainerView
-                        android:id="@+id/detail_map"
-                        android:name="com.google.android.gms.maps.SupportMapFragment"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        map:liteMode="true"
-                        map:mapType="normal" />
-
                     <TextView
                         android:id="@+id/detail_address"
                         android:layout_width="0dp"
@@ -297,15 +285,10 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:text="Address" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.cardview.widget.CardView>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/detail_fab"
         android:layout_width="wrap_content"
@@ -313,7 +296,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginBottom="85dp"
+        android:layout_marginBottom="150dp"
         android:backgroundTint="#DD2C00"
         android:contentDescription="@string/update_estate_s_detail_info"
         android:minWidth="48dp"
@@ -321,5 +304,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_edit_24" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
