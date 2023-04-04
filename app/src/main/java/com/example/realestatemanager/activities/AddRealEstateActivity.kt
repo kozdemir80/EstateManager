@@ -94,11 +94,22 @@ class AddRealEstateActivity:AppCompatActivity() {
    private fun initChipGroup() {
       binding.addVicinityBtn.setOnClickListener {
          if (binding.addVicinity.toString().isNotEmpty()) {
+            addChip(binding.addVicinity.text.toString())
             binding.addVicinity.setText("")
          }
       }
    }
-
+   private fun addChip(text: String) {
+      val chip = Chip(this)
+      chip.text = text
+      chip.isCloseIconVisible = true
+      binding.addChipGroup.addView(chip)
+      vicinity.add(text)
+      chip.setOnCloseIconClickListener {
+         binding.addChipGroup.removeView(chip)
+         vicinity.remove(text)
+      }
+   }
 
    private fun dateBtn(){
       binding.addEntryDate.setOnClickListener {
