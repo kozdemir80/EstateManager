@@ -1,7 +1,13 @@
 package com.example.realestatemanager.activities
 import android.annotation.SuppressLint
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.app.PendingIntent
+import android.app.PendingIntent.*
+import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -23,6 +29,7 @@ import com.example.realestatemanager.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.GridAdapter
 import com.example.realestatemanager.constants.Constants
+import com.example.realestatemanager.constants.Constants.Constants.CHANNEL_ID
 import com.example.realestatemanager.databinding.AddItemLayoutBinding
 import com.example.realestatemanager.model.EstateData
 import com.example.realestatemanager.model.UserData
@@ -44,6 +51,10 @@ class AddRealEstateActivity:AppCompatActivity() {
     private lateinit var addType :AutoCompleteTextView
     private lateinit var addStatus :AutoCompleteTextView
    private lateinit var estateViewModel: EstateViewModel
+   private lateinit var notificationManager: NotificationManager
+   private lateinit var notificationChannel: NotificationChannel
+   private lateinit var builder: Notification.Builder
+   private val channelId = "i.apps.notifications"
    private lateinit var adapter: GridAdapter
    private val vicinity = ArrayList<String>()
    private val photoUris = ArrayList<Uri>()
@@ -83,22 +94,11 @@ class AddRealEstateActivity:AppCompatActivity() {
    private fun initChipGroup() {
       binding.addVicinityBtn.setOnClickListener {
          if (binding.addVicinity.toString().isNotEmpty()) {
-            addChip(binding.addVicinity.text.toString())
             binding.addVicinity.setText("")
          }
       }
    }
-   private fun addChip(text: String) {
-      val chip = Chip(applicationContext)
-      chip.text = text
-      chip.isCloseIconVisible = true
-      binding.addChipGroup.addView(chip)
-      vicinity.add(text)
-      chip.setOnCloseIconClickListener {
-         binding.addChipGroup.removeView(chip)
-         vicinity.remove(text)
-      }
-   }
+
 
    private fun dateBtn(){
       binding.addEntryDate.setOnClickListener {
@@ -205,9 +205,7 @@ class AddRealEstateActivity:AppCompatActivity() {
             estateViewModel.addEstate(estate)
 
             // Send notification to user
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-               sendNotification()
-            }
+              sendNotification()
             Toast.makeText(applicationContext,"Successfully Added",Toast.LENGTH_SHORT).show()
          }
       }
@@ -274,34 +272,21 @@ class AddRealEstateActivity:AppCompatActivity() {
       }
       return true
    }
-
-   @SuppressLint("MissingPermission")
-   @RequiresApi(Build.VERSION_CODES.M)
-   private fun sendNotification() {
-      val intent = Intent(applicationContext, MainActivity::class.java).apply {
-         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-      }
-      val pendingIntent: PendingIntent = PendingIntent.getActivity(
-         applicationContext,
-         0,
-         intent,
-         PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
-      )
-
-      val builder = NotificationCompat.Builder(applicationContext, Constants.Constants.CHANNEL_ID)
-         .setSmallIcon(R.drawable.ic_launcher_foreground)
-         .setContentTitle(getString(R.string.notification_title))
-         .setContentText(getString(R.string.notification_description))
-         .setStyle(
-            NotificationCompat.BigTextStyle()
-               .bigText(getString(R.string.notification_description_long))
-         )
+@SuppressLint("UnspecifiedImmutableFlag")
+private fun sendNotification(){
+   notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+   val pendingIntent = getActivity(this, 0, intent, FLAG_UPDATE_CURRENT)
+   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+      notificationChannel = NotificationChannel(channelId,"Estate added successfully", NotificationManager.IMPORTANCE_HIGH)
+      notificationChannel.enableLights(true)
+      notificationChannel.lightColor = Color.GREEN
+      notificationChannel.enableVibration(false)
+      notificationManager.createNotificationChannel(notificationChannel)
+      builder = Notification.Builder(this, channelId)
+         .setSmallIcon(R.drawable.ic_baseline_circle_notifications_24)
+         .setContentText("Estate added Successfully")
          .setContentIntent(pendingIntent)
-         .setAutoCancel(true)
-         .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-
-      with(NotificationManagerCompat.from(applicationContext)) {
-         notify(Constants.Constants.NOTIFICATION_ID, builder.build())
-      }
    }
+   notificationManager.notify(1234, builder.build())
+}
 }

@@ -91,5 +91,8 @@
     <string name="remember_me">Remember me</string>
     <string name="no_match_found">No Match Found</string>
     <string name="map">Map</string>
-
+    <string-array name="status">
+        <item>Vacant</item>
+        <item>Sold</item>
+    </string-array>
 </resources>
