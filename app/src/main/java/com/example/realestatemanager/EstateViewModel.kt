@@ -1,5 +1,4 @@
 package com.example.realestatemanager
-
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -12,7 +11,6 @@ import com.example.realestatemanager.model.EstateData
 import com.example.realestatemanager.model.UserData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
 class EstateViewModel(application: Application):AndroidViewModel(application){
      val readAllData:LiveData<List<EstateData>>
     private val repository:EstateRepository
@@ -44,5 +42,4 @@ class EstateViewModel(application: Application):AndroidViewModel(application){
             userRepository.addUser(userData)
         }
     }
-
 }

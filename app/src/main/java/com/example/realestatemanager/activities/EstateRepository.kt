@@ -1,9 +1,6 @@
 package com.example.realestatemanager.activities
-
 import androidx.lifecycle.LiveData
 import com.example.realestatemanager.model.EstateData
-import com.example.realestatemanager.model.UserData
-
 class EstateRepository(private val estateDao: EstateDao){
 
     val readAllData:LiveData<List<EstateData>> = estateDao.readData()

@@ -104,5 +104,4 @@ data class EstateData(
             return estate
         }
     }
-
 }

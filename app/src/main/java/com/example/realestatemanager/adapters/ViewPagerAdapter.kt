@@ -5,9 +5,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.realestatemanager.activities.LoanCalculatorActivity
 import com.example.realestatemanager.fragments.EstateListFragment
-import com.example.realestatemanager.fragments.MapViewActivity
 import com.example.realestatemanager.fragments.SearchFragment
-
 class ViewPagerAdapter(FragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(FragmentManager,lifecycle){
     override fun getItemCount(): Int {
         return 3

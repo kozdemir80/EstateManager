@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
-import com.example.realestatemanager.Api.AddressRepository
+import com.example.realestatemanager.api.AddressRepository
 import com.example.realestatemanager.BuildConfig.MAPS_API_KEY
 import com.example.realestatemanager.EstateViewModel
 import com.example.realestatemanager.R
@@ -35,7 +35,6 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.gson.Gson
-
 @Suppress("DEPRECATION")
 class MapViewActivity:AppCompatActivity(),OnMapReadyCallback{
     private lateinit var addressesViewModel: AddressesViewModel
@@ -183,6 +182,7 @@ class MapViewActivity:AppCompatActivity(),OnMapReadyCallback{
             else -> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
     }
+    // Displaying estate location and address in a map marked with pin
     @SuppressLint("SuspiciousIndentation")
     private fun addressDetails(){
         val apiKey=MAPS_API_KEY

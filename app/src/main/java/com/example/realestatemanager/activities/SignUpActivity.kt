@@ -2,7 +2,6 @@ package com.example.realestatemanager.activities
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -15,7 +14,6 @@ class SignUpActivity:AppCompatActivity(){
     private lateinit var binding: SignUpActivityBinding
     private var checkUser = false
     private lateinit var estateViewModel: EstateViewModel
-    private lateinit var rememberCheckBox:CheckBox
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +24,7 @@ class SignUpActivity:AppCompatActivity(){
         addUser()
         rememberUser()
     }
+    //Create a user to sign-in
     private fun addUser(){
         val preferences=getSharedPreferences("saveUser", MODE_PRIVATE)
         val editor=preferences.edit()
@@ -49,6 +48,7 @@ class SignUpActivity:AppCompatActivity(){
             }
         }
     }
+    //Checking if user fields are filled
     private fun checkUser():Boolean{
         binding.apply {
             if (userName.text!!.isEmpty()){
@@ -66,6 +66,7 @@ class SignUpActivity:AppCompatActivity(){
         }
         return true
     }
+    //Remembering userName and password method
     private fun rememberUser(){
         val preferences=getSharedPreferences("saveUser", MODE_PRIVATE)
                 val user= preferences.getString("UserName",null)

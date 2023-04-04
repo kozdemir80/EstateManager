@@ -4,8 +4,6 @@ import android.database.Cursor
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.realestatemanager.model.EstateData
-import com.example.realestatemanager.model.UserData
-
 @Dao
 interface EstateDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -17,12 +15,8 @@ interface EstateDao{
     // --- FOR CONTENT PROVIDER ---
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addEstateForContentProvider(estateData: EstateData): Long
-
     @Update
     fun updateEstateForContentProvider(estateData: EstateData): Int
-
     @Query("SELECT * FROM estate_table ORDER BY id ASC")
     fun readAllDataWithCursor(): Cursor
-
-
 }

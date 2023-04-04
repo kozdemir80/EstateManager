@@ -3,7 +3,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +10,7 @@ import com.example.realestatemanager.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.RealEstateAdapter
 import com.example.realestatemanager.model.EstateData
+//Displaying Items in a list
 class EstateListFragment:Fragment(R.layout.estate_list_fragment) {
     private lateinit var realEstateAdapter:RealEstateAdapter
     private lateinit var estateViewModel:EstateViewModel

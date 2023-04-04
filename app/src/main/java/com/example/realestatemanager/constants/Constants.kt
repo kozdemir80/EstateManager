@@ -1,9 +1,6 @@
 package com.example.realestatemanager.constants
-
 class Constants {
     object Constants {
-        const val CHANNEL_ID = "channel_id"
-        const val NOTIFICATION_ID = 101
         const val BASE_URL = "https://maps.googleapis.com/maps/api/"
         const val TYPE = "type"
         const val DISTRICT = "district"

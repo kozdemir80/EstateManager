@@ -3,44 +3,27 @@ import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.app.PendingIntent
 import android.app.PendingIntent.*
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
 import com.example.realestatemanager.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.GridAdapter
-import com.example.realestatemanager.constants.Constants
-import com.example.realestatemanager.constants.Constants.Constants.CHANNEL_ID
 import com.example.realestatemanager.databinding.AddItemLayoutBinding
 import com.example.realestatemanager.model.EstateData
-import com.example.realestatemanager.model.UserData
 import com.google.android.material.chip.Chip
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import dev.ronnie.github.imagepicker.ImageResult
@@ -59,7 +42,6 @@ class AddRealEstateActivity:AppCompatActivity() {
    private val vicinity = ArrayList<String>()
    private val photoUris = ArrayList<Uri>()
    private val photoCaptions = ArrayList<String>()
-   private lateinit var auth: FirebaseAuth
    private lateinit var imagePicker:dev.ronnie.github.imagepicker.ImagePicker
    private var allFieldsChecked = false
    // Date format for date picker
@@ -110,7 +92,6 @@ class AddRealEstateActivity:AppCompatActivity() {
          vicinity.remove(text)
       }
    }
-
    private fun dateBtn(){
       binding.addEntryDate.setOnClickListener {
          val entryPicker = MaterialDatePicker.Builder.datePicker()
@@ -178,7 +159,6 @@ class AddRealEstateActivity:AppCompatActivity() {
          }
       }
    }
-
    // Set up fab to create new item w/ info
    private fun addEstate() {
       binding.addButton.setOnClickListener {
@@ -221,6 +201,7 @@ class AddRealEstateActivity:AppCompatActivity() {
          }
       }
    }
+   //Checking if all the fields are filled
    private fun checkAllFields(): Boolean {
       binding.apply {
          // Type
@@ -283,6 +264,7 @@ class AddRealEstateActivity:AppCompatActivity() {
       }
       return true
    }
+   // send notification to realtor after an estate is added
 @SuppressLint("UnspecifiedImmutableFlag")
 private fun sendNotification(){
    notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

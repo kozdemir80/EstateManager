@@ -1,5 +1,4 @@
-package com.example.realestatemanager.model
-
+package com.example.realestatemanager.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -7,15 +6,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.realestatemanager.R
-import com.example.realestatemanager.activities.AddRealEstateActivity
-import com.example.realestatemanager.activities.SignUpActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
 class LoginActivity:AppCompatActivity(){
     private lateinit var userName:TextInputEditText
     private lateinit var password:TextInputEditText
@@ -34,7 +30,6 @@ class LoginActivity:AppCompatActivity(){
             startActivity(intent)
         }
     }
-
     private fun login(){
         userName= TextInputEditText(this)
         userName.findViewById<TextInputEditText>(R.id.userName1)

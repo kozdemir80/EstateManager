@@ -9,20 +9,13 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.PhotoAdapter
 import com.example.realestatemanager.databinding.DescriptionActivityBinding
-import com.example.realestatemanager.fragments.MapViewActivity
-import com.example.realestatemanager.model.EstateData
-import com.google.gson.Gson
-
 @Suppress("DEPRECATION")
 class DescriptionActivity :AppCompatActivity(){
-
     private val args by navArgs<DescriptionActivityArgs>()
     private lateinit var binding: DescriptionActivityBinding
     private val photoUris = ArrayList<Uri>()
     private var photoCaptions = ArrayList<String>()
     private lateinit var adapter: PhotoAdapter
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.description_activity)
@@ -30,9 +23,7 @@ class DescriptionActivity :AppCompatActivity(){
         setContentView(binding.root)
         slider()
         descriptionDetails()
-
-
-
+        //Transfer Estate details for updating
        binding.detailFab.setOnClickListener {
            val intent = Intent(this, EditDetailsActivity::class.java)
            intent.putExtra("id",args.estateArgs!!.id).toString()
@@ -53,7 +44,6 @@ class DescriptionActivity :AppCompatActivity(){
            startActivity(intent)
        }
 }
-
     // Display estate photos w/ slider
     private fun slider() {
         // Get uris
@@ -80,6 +70,7 @@ class DescriptionActivity :AppCompatActivity(){
             }
         )
     }
+    // Details of an estate
   private fun descriptionDetails() {
       binding.detailDescription.text = args.estateArgs!!.description
       binding.detailSurface.text = args.estateArgs!!.surface.toString()

@@ -4,17 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.bumptech.glide.Glide
 import com.example.realestatemanager.R
-import com.example.realestatemanager.fragments.EstateListFragmentDirections
 import com.example.realestatemanager.model.EstateData
-
 class RealEstateAdapter:RecyclerView.Adapter<RealEstateAdapter.ListViewHolder>() {
     private lateinit var context: Context
     private lateinit var mListener: OnItemClickListener
