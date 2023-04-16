@@ -1,4 +1,4 @@
-package com.example.realestatemanager.activities
+package com.example.realestatemanager.dao
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
@@ -9,7 +9,7 @@ import com.example.realestatemanager.model.UserData
 @Database(entities = [EstateData::class], version = 1, exportSchema = false)
 @TypeConverters(EstateData.MyVicinityConvertor::class)
 abstract class EstateDataBase: RoomDatabase() {
-    abstract fun estateDao():EstateDao
+    abstract fun estateDao(): EstateDao
     companion object {
         @Volatile
         private var INSTANCE: EstateDataBase? = null
@@ -31,11 +31,11 @@ abstract class EstateDataBase: RoomDatabase() {
     }
     @Database(entities = [UserData::class], version = 1, exportSchema = false)
     abstract class UserDataBase:RoomDatabase() {
-        abstract fun userDao():UserDao
+        abstract fun userDao(): UserDao
         companion object{
             @Volatile
             private var INSTANCE: UserDataBase?=null
-            fun getUserDatabase(context: Context):UserDataBase {
+            fun getUserDatabase(context: Context): UserDataBase {
                 val tempInstance = INSTANCE
                 if (tempInstance != null) {
                     return tempInstance

@@ -10,16 +10,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.example.realestatemanager.EstateViewModel
+import com.example.realestatemanager.viewModel.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.ViewPagerAdapter
 import com.example.realestatemanager.databinding.ActivityMainBinding
-import com.example.realestatemanager.fragments.MapViewActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var toggle: ActionBarDrawerToggle
-    private lateinit var estateViewModel:EstateViewModel
+    private lateinit var estateViewModel: EstateViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

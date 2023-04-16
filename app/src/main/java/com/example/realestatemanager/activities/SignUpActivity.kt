@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.realestatemanager.EstateViewModel
+import com.example.realestatemanager.viewModel.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.databinding.SignUpActivityBinding
 import com.example.realestatemanager.model.UserData

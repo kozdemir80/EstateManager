@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.realestatemanager.EstateViewModel
+import com.example.realestatemanager.viewModel.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.GridAdapter
 import com.example.realestatemanager.databinding.EditDetailsActivityBinding

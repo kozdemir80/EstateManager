@@ -5,11 +5,12 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 object AddressInstance {
+    // --- RETROFİT FOR GOOGLE ---
     private val retrofit by lazy {
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         val client = OkHttpClient.Builder()
-            .addInterceptor(logging)
+           .addInterceptor(logging)
             .build()
         Retrofit.Builder()
             .baseUrl(Constants.Constants.BASE_URL)

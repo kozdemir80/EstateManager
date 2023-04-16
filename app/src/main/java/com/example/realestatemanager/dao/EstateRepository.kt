@@ -1,4 +1,4 @@
-package com.example.realestatemanager.activities
+package com.example.realestatemanager.dao
 import androidx.lifecycle.LiveData
 import com.example.realestatemanager.model.EstateData
 class EstateRepository(private val estateDao: EstateDao){

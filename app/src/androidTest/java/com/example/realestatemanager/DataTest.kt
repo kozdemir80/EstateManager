@@ -6,8 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.example.realestatemanager.activities.EstateDao
-import com.example.realestatemanager.activities.EstateDataBase
+import com.example.realestatemanager.dao.EstateDao
+import com.example.realestatemanager.dao.EstateDataBase
 import com.example.realestatemanager.model.EstateData
 import junit.framework.Assert
 import kotlinx.coroutines.runBlocking

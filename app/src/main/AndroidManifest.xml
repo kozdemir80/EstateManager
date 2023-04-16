@@ -80,7 +80,7 @@
         <activity
             android:name=".activities.EditDetailsActivity"
             android:exported="true"/>
-        <activity android:name=".fragments.MapViewActivity"
+        <activity android:name=".activities.MapViewActivity"
             android:exported="true"/>
     </application>
 

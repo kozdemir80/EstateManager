@@ -1,4 +1,4 @@
-package com.example.realestatemanager.fragments
+package com.example.realestatemanager.activities
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -16,9 +16,8 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.realestatemanager.api.AddressRepository
 import com.example.realestatemanager.BuildConfig.MAPS_API_KEY
-import com.example.realestatemanager.EstateViewModel
+import com.example.realestatemanager.viewModel.EstateViewModel
 import com.example.realestatemanager.R
-import com.example.realestatemanager.activities.DescriptionDetailsFromMapActivity
 import com.example.realestatemanager.model.EstateData
 import com.example.realestatemanager.viewModel.AddressesViewModel
 import com.example.realestatemanager.viewModel.ConvertorFactory
@@ -38,7 +37,7 @@ import com.google.gson.Gson
 @Suppress("DEPRECATION")
 class MapViewActivity:AppCompatActivity(),OnMapReadyCallback{
     private lateinit var addressesViewModel: AddressesViewModel
-    private lateinit var estateViewModel:EstateViewModel
+    private lateinit var estateViewModel: EstateViewModel
     private var mapView: GoogleMap? = null
     private lateinit var lastLocation: Location
     private lateinit var placesClient: PlacesClient

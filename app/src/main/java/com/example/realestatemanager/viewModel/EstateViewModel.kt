@@ -1,19 +1,20 @@
-package com.example.realestatemanager
+package com.example.realestatemanager.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.realestatemanager.activities.EstateDataBase
-import com.example.realestatemanager.activities.EstateDataBase.Companion.getDatabase
-import com.example.realestatemanager.activities.EstateRepository
-import com.example.realestatemanager.activities.UserRepository
+import com.example.realestatemanager.dao.EstateDataBase
+import com.example.realestatemanager.dao.EstateDataBase.Companion.getDatabase
+import com.example.realestatemanager.dao.EstateRepository
+import com.example.realestatemanager.dao.UserRepository
 import com.example.realestatemanager.model.EstateData
 import com.example.realestatemanager.model.UserData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 class EstateViewModel(application: Application):AndroidViewModel(application){
+    //--- VİEW MODEL FOR REAL ESTATE ---
      val readAllData:LiveData<List<EstateData>>
-    private val repository:EstateRepository
+    private val repository: EstateRepository
     init {
         val estateDao=getDatabase(application).estateDao()
         repository= EstateRepository(estateDao)
@@ -30,10 +31,11 @@ class EstateViewModel(application: Application):AndroidViewModel(application){
             repository.updateEstate(estate)
         }
     }
+    // --- VİEW MODEL FOR USER ---
     val readUserData:LiveData<List<UserData>>
-    private val userRepository:UserRepository
+    private val userRepository: UserRepository
     init {
-        val userDao=EstateDataBase.UserDataBase.getUserDatabase(application).userDao()
+        val userDao= EstateDataBase.UserDataBase.getUserDatabase(application).userDao()
         userRepository= UserRepository(userDao)
         readUserData=userRepository.readUserData
     }

@@ -5,7 +5,7 @@ import android.content.ContentValues
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.example.realestatemanager.activities.EstateDataBase
+import com.example.realestatemanager.dao.EstateDataBase
 import com.example.realestatemanager.model.EstateContentProvider
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.notNullValue

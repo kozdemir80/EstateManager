@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.realestatemanager.EstateViewModel
+import com.example.realestatemanager.viewModel.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.SearchAdapter
 import com.example.realestatemanager.model.EstateData

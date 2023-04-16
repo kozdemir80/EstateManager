@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.realestatemanager.viewModel
+package com.example.realestatemanager
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.ConnectivityManager

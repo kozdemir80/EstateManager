@@ -4,7 +4,7 @@ import android.content.ContentUris
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
-import com.example.realestatemanager.activities.EstateDataBase.Companion.getDatabase
+import com.example.realestatemanager.dao.EstateDataBase.Companion.getDatabase
 class EstateContentProvider:ContentProvider(){
     companion object {
         const val AUTHORITY = "com.example.realestatemanager.model"

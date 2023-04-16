@@ -1,11 +1,11 @@
-package com.example.realestatemanager.activities
-
+package com.example.realestatemanager.dao
 import android.database.Cursor
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.realestatemanager.model.EstateData
 @Dao
 interface EstateDao{
+    //--- FOR REAL ESTATE ---
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addEstate (estateData: EstateData)
     @Query("SELECT * FROM estate_table ORDER BY id ASC")

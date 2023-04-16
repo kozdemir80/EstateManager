@@ -6,14 +6,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.realestatemanager.EstateViewModel
+import com.example.realestatemanager.viewModel.EstateViewModel
 import com.example.realestatemanager.R
 import com.example.realestatemanager.adapters.RealEstateAdapter
 import com.example.realestatemanager.model.EstateData
 //Displaying Items in a list
 class EstateListFragment:Fragment(R.layout.estate_list_fragment) {
     private lateinit var realEstateAdapter:RealEstateAdapter
-    private lateinit var estateViewModel:EstateViewModel
+    private lateinit var estateViewModel: EstateViewModel
     private lateinit var estaListRecyclerView: RecyclerView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
