@@ -13,8 +13,6 @@ Real Estate Attributes: Listings include type, price, surface area, description,
 ![edit](https://github.com/kozdemir80/EstateManager/assets/84885403/b6f92af9-830f-47c6-980b-59b9ad9163f9)
 
 Listing Management: Agents can create, view, modify, and mark listings as sold.
-![edit](https://github.com/kozdemir80/EstateManager/assets/84885403/fe2bffdc-fe3d-4b8a-8a8f-7706ff66cd98)
-
 Geolocalization: Listings are displayed on a dynamic map for easy location tracking.
 
 Search Engine: Agents can perform advanced searches based on multiple criteria.
